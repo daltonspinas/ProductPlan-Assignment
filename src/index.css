@@ -1,3 +1,13 @@
+@font-face {
+  font-family: font-awesome;
+  src: url("./assets/Font Awesome 5 Free-Solid-900.otf") format("opentype");
+}
+
+@font-face {
+  font-family: gilroy;
+  src: url("./assets/Radomir Tinkov - Gilroy-Medium.otf") format("opentype");
+}
+
 html,
 body,
 #root {
@@ -7,15 +17,15 @@ body,
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: gilroy, source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -28,7 +38,6 @@ code {
   position: relative;
   height: 10vh;
   width: 100%;
-  background-color: lavender;
 }
 
 #logo {
@@ -67,8 +76,8 @@ code {
 }
 
 .roadmap-dash {
-  background-color: lightsalmon;
   height: 15vh;
+  text-align: left;
 }
 
 #board {
@@ -91,6 +100,8 @@ code {
 #lane-header {
   height: 30px;
   background-color: #ed5f31;
+  color: white;
+  text-align: left;
 }
 
 #lane table {
@@ -113,9 +124,13 @@ code {
 #bar-drop-target {
   border: dashed 1px grey;
   width: 400%;
+  height: 30px;
 }
 
 #bar {
   width: 400%;
   background-color: blue;
+  height: 30px;
+  color: white;
+  text-align: left;
 }

@@ -19,7 +19,9 @@ class Lane extends Component {
   render() {
     return (
       <div id='lane'>
-        <div id='lane-header'>&#9661; Lane</div>
+        <div id='lane-header'>
+          <p style={{ fontFamily: "font-awesome" }}>caret-down Lane</p>
+        </div>
         <table>
           <tbody>
             <tr>

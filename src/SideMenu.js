@@ -10,7 +10,6 @@ class SideMenu extends Component {
   render() {
     return (
       <div id='side-menu'>
-        Side Menu
         <AddLane />
         <AddBar />
       </div>
