@@ -82,19 +82,40 @@ code {
   height: 100%;
   width: 20%;
   float: right;
-  background-color: blanchedalmond;
+  background-color: white;
 }
 #lane {
   width: 95%;
   float: right;
 }
-#lane div {
+#lane-header {
   height: 30px;
   background-color: #ed5f31;
 }
 
 #lane table {
+  border-collapse: collapse;
   background-color: white;
   width: 100%;
-  height: 100px;
+  table-layout: fixed;
+  overflow: visible;
+}
+
+#lane table td {
+  height: 45px;
+}
+
+#lane table tbody tr td {
+  border-left: dashed 1px grey;
+  border-right: dashed 1px grey;
+}
+
+#bar-drop-target {
+  border: dashed 1px grey;
+  width: 400%;
+}
+
+#bar {
+  width: 400%;
+  background-color: blue;
 }

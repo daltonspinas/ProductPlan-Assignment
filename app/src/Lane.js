@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ee from "./Event";
+import BarDropTarget from "./BarDropTarget";
+import Bar from "./Bar";
 
 class Lane extends Component {
   constructor() {
@@ -9,19 +11,56 @@ class Lane extends Component {
 
   componentDidMount() {
     ee.addListener("bar-placed", () => {
-      this.setState({ bars: this.state.bars++ });
+      console.log("lane knows bar was placed");
+      this.setState({ bars: (this.state.bars += 1) });
     });
   }
 
   render() {
-    console.log("hello from lane");
     return (
       <div id='lane'>
-        <div>&#9661; Lane</div>
+        <div id='lane-header'>&#9661; Lane</div>
         <table>
           <tbody>
-            <tr />
-            <tr />
+            <tr>
+              <td>
+                {this.state.bars === 0 && <BarDropTarget />}
+                {this.state.bars >= 1 && <Bar barNumber={1} />}
+              </td>
+              <td />
+              <td />
+              <td />
+              <td>
+                {this.state.bars === 2 && <BarDropTarget />}
+                {this.state.bars >= 3 && <Bar barNumber={3} />}
+              </td>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            {this.state.bars >= 1 && (
+              <tr>
+                <td />
+                <td />
+                <td>
+                  {this.state.bars === 1 && <BarDropTarget />}
+                  {this.state.bars >= 2 && <Bar barNumber={2} />}
+                </td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+              </tr>
+            )}
           </tbody>
         </table>
       </div>

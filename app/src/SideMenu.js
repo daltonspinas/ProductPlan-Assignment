@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AddLane from "./AddLane";
+import AddBar from "./AddBar";
 
 class SideMenu extends Component {
   constructor() {
@@ -11,6 +12,7 @@ class SideMenu extends Component {
       <div id='side-menu'>
         Side Menu
         <AddLane />
+        <AddBar />
       </div>
     );
   }
