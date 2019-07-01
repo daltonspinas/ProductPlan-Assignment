@@ -33,7 +33,13 @@ class LaneDropTarget extends Component {
   render() {
     const { connectDropTarget } = this.props;
     return connectDropTarget(
-      <div>{this.state.laneGrabbed ? <div>Drop lane here</div> : null}</div>
+      <div>
+        {this.state.laneGrabbed ? (
+          <div id='lane-drop-target'>
+            <p>Drop here</p>
+          </div>
+        ) : null}
+      </div>
     );
   }
 }

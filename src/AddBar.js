@@ -28,7 +28,13 @@ function collect(connect, monitor) {
 class AddBar extends Component {
   render() {
     const { isDragging, connectDragSource, src } = this.props;
-    return connectDragSource(<div>Add Bar</div>);
+    return connectDragSource(
+      <div className='side-menu-item'>
+        <span style={{ fontFamily: "font-awesome" }}>
+          grip-lines A&zwnj;dd bar
+        </span>
+      </div>
+    );
     /* code here */
   }
 }

@@ -27,7 +27,13 @@ function collect(connect, monitor) {
 class AddLane extends Component {
   render() {
     const { isDragging, connectDragSource, src } = this.props;
-    return connectDragSource(<div>Add Lane</div>);
+    return connectDragSource(
+      <div className='side-menu-item'>
+        <span style={{ fontFamily: "font-awesome" }}>
+          grip-lines A&zwnj;dd lane
+        </span>
+      </div>
+    );
     /* code here */
   }
 }
