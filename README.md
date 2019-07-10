@@ -5,6 +5,10 @@
 
 ### Running the Application
 
+#### Live URL
+- https://pp-candidate-hw.herokuapp.com/
+
+#### Run Locally
 - clone or fork this repo onto your local machine
 - cd into the root directory
 - run `npm install` to install dependencies
